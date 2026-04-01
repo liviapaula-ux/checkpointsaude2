@@ -6,11 +6,12 @@
     <title>Checkpoint Saúde Gestante 2 - Ifamily • iDoc</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: #ffffff;
             color: #1f2328;
         }
@@ -26,14 +27,14 @@
             background-color: #f6f8fa;
             border: 1px solid #d0d7de;
             border-radius: 6px;
-            transition: border-color 0.2s, box-shadow 0.2s;
+            transition: all 0.2s ease;
             color: #1f2328;
         }
 
         .gh-input:focus {
             border-color: #dc2626;
             outline: none;
-            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+            box-shadow: 0 0 0 3px rgba(220,38,38,.15);
             background-color: #ffffff;
         }
 
@@ -41,10 +42,7 @@
             background-color: #dc2626;
             color: white;
             font-weight: 600;
-            border: 1px solid rgba(27, 31, 36, 0.15);
             border-radius: 6px;
-            transition: all 0.2s ease;
-            cursor: pointer;
         }
 
         .btn-primary:hover {
@@ -55,17 +53,15 @@
             border-bottom: 1px solid #d0d7de;
             padding-bottom: 8px;
             margin-bottom: 16px;
-            font-size: 0.75rem;
+            font-size: .75rem;
             font-weight: 700;
             color: #57606a;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            letter-spacing: .05em;
         }
     </style>
 </head>
+
 <body class="min-h-screen py-12 px-4">
 
 <div class="max-w-3xl mx-auto">
@@ -84,17 +80,17 @@ class="gh-card shadow-sm">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 
 <div>
-<label>Nome Completo</label>
+<label class="text-sm font-semibold">Nome Completo</label>
 <input name="nome" type="text" required class="gh-input w-full p-2.5 text-sm">
 </div>
 
 <div>
-<label>E-mail iFood</label>
+<label class="text-sm font-semibold">E-mail iFood</label>
 <input name="email_ifood" type="email" required class="gh-input w-full p-2.5 text-sm">
 </div>
 
 <div class="md:col-span-2">
-<label>Peso e Altura</label>
+<label class="text-sm font-semibold">Peso e Altura</label>
 <input name="peso_altura" type="text" class="gh-input w-full p-2.5 text-sm">
 </div>
 
@@ -104,48 +100,62 @@ class="gh-card shadow-sm">
 <section>
 <h3 class="section-title">Saúde na Gestação</h3>
 
-<textarea name="doenca_gestacao" class="gh-input w-full p-2.5 text-sm mb-4" placeholder="Desenvolveu alguma doença na gestação?"></textarea>
+<div class="space-y-4">
+<textarea name="doenca_gestacao" class="gh-input w-full p-2.5 text-sm" rows="2" placeholder="Desenvolveu alguma doença na gestação?"></textarea>
 
-<textarea name="remedio" class="gh-input w-full p-2.5 text-sm" placeholder="Uso de remédio contínuo"></textarea>
+<textarea name="remedio" class="gh-input w-full p-2.5 text-sm" rows="2" placeholder="Está em uso de remédio contínuo?"></textarea>
+</div>
 </section>
 
 <section>
 <h3 class="section-title">Exames</h3>
 
-<textarea name="ultrassom" class="gh-input w-full p-2.5 text-sm mb-4"></textarea>
+<div class="space-y-4">
+<textarea name="ultrassom" class="gh-input w-full p-2.5 text-sm" rows="2" placeholder="Alterações nos ultrassons"></textarea>
 
-<textarea name="exames" class="gh-input w-full p-2.5 text-sm mb-4"></textarea>
+<textarea name="exames" class="gh-input w-full p-2.5 text-sm" rows="2" placeholder="Exames realizados"></textarea>
 
-<textarea name="outros_exames" class="gh-input w-full p-2.5 text-sm"></textarea>
+<textarea name="outros_exames" class="gh-input w-full p-2.5 text-sm" rows="2" placeholder="Outras alterações"></textarea>
+</div>
 </section>
 
 <section>
 <h3 class="section-title">Bem-estar</h3>
 
-<input name="emocional" class="gh-input w-full p-2.5 text-sm mb-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-<input name="vacinas" class="gh-input w-full p-2.5 text-sm mb-4">
+<input name="emocional" class="gh-input w-full p-2.5 text-sm" placeholder="Emocional (1 a 10)">
 
-<input name="posicao_fetal" class="gh-input w-full p-2.5 text-sm mb-4">
+<input name="vacinas" class="gh-input w-full p-2.5 text-sm" placeholder="Vacinas recebidas">
 
-<input name="tipo_parto" class="gh-input w-full p-2.5 text-sm">
+<input name="posicao_fetal" class="gh-input w-full p-2.5 text-sm" placeholder="Posição fetal">
+
+<input name="tipo_parto" class="gh-input w-full p-2.5 text-sm" placeholder="Tipo de parto desejado">
+
+</div>
 </section>
 
 <section>
 <h3 class="section-title">Ocorrências</h3>
 
-<textarea name="atividade" class="gh-input w-full p-2.5 text-sm mb-4"></textarea>
+<div class="space-y-4">
 
-<input name="internacao" class="gh-input w-full p-2.5 text-sm mb-4">
+<textarea name="atividade" class="gh-input w-full p-2.5 text-sm" rows="2" placeholder="Atividade física e alimentação"></textarea>
 
-<input name="sangramento" class="gh-input w-full p-2.5 text-sm mb-4">
+<input name="internacao" class="gh-input w-full p-2.5 text-sm" placeholder="Internação ou ida ao PS">
 
-<input name="maternidade" class="gh-input w-full p-2.5 text-sm">
+<input name="sangramento" class="gh-input w-full p-2.5 text-sm" placeholder="Apresentou sangramento?">
+
+<input name="maternidade" class="gh-input w-full p-2.5 text-sm" placeholder="Maternidade / Hospital">
+
+</div>
 </section>
 
-<button type="submit" class="btn-primary py-3 px-10 text-sm">
+<div class="pt-6 border-t border-[#d0d7de]">
+<button type="submit" class="btn-primary py-3 px-10 text-sm w-full">
 Enviar Dados
 </button>
+</div>
 
 </div>
 </form>
