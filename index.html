@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkpoint Saúde Gestante 2 - Ifamily • iDoc</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #1f2328;
+        }
+
+        .gh-card {
+            background-color: #ffffff;
+            border: 1px solid #d0d7de;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .gh-input {
+            background-color: #f6f8fa;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            color: #1f2328;
+        }
+
+        .gh-input:focus {
+            border-color: #dc2626;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+            background-color: #ffffff;
+        }
+
+        .btn-primary {
+            background-color: #dc2626;
+            color: white;
+            font-weight: 600;
+            border: 1px solid rgba(27, 31, 36, 0.15);
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: #b91c1c;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+        }
+
+        .section-title {
+            border-bottom: 1px solid #d0d7de;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #57606a;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2357606a'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen py-12 px-4">
+
+    <div class="max-w-3xl mx-auto">
+        
+        <!-- Cabeçalho -->
+        <div class="text-center mb-10">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-red-50 mb-4 border border-red-100">
+                <i data-lucide="heart-pulse" class="w-8 h-8 text-red-600"></i>
+            </div>
+            <h1 class="text-3xl font-extrabold tracking-tight text-gray-900 mb-1">
+                Checkpoint Saúde <span class="text-red-600">Gestante 2</span>
+            </h1>
+            <p class="text-gray-500 font-medium italic">Ifamily • iDoc</p>
+        </div>
+
+        <!-- Formulário -->
+        <form 
+            action="COLE_AQUI_SUA_URL_DO_GOOGLE_SCRIPT" 
+            method="GET" 
+            class="gh-card shadow-sm"
+        >
+            <!-- Barra Superior do Card -->
+            <div class="bg-[#f6f8fa] p-4 border-b border-[#d0d7de] flex items-center justify-between">
+                <div class="flex items-center gap-2 text-sm font-semibold text-gray-700">
+                    <i data-lucide="file-edit" class="w-4 h-4 text-gray-500"></i>
+                    Atualização periódica
+                </div>
+                <div class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                    <span class="text-[10px] text-gray-500 font-bold uppercase">Online</span>
+                </div>
+            </div>
+
+            <div class="p-8 space-y-10">
+                
+                <!-- Dados de Identificação -->
+                <section>
+                    <h3 class="section-title">
+                        <i data-lucide="user-circle" class="w-4 h-4"></i> Identificação
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div class="space-y-1">
+                            <label class="text-sm font-semibold text-gray-700">Nome Completo</label>
+                            <input name="nome" type="text" required class="gh-input w-full p-2.5 text-sm" placeholder="Nome da gestante">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-sm font-semibold text-gray-700">E-mail iFood</label>
+                            <input name="email_ifood" type="email" required class="gh-input w-full p-2.5 text-sm" placeholder="seuemail@ifood.com.br">
+                        </div>
+                        <div class="space-y-1 md:col-span-2">
+                            <label class="text-sm font-semibold text-gray-700">Peso e Altura</label>
+                            <input name="peso_altura" type="text" class="gh-input w-full p-2.5 text-sm" placeholder="Ex: 65kg / 1.65m">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Histórico de Saúde -->
+                <section>
+                    <h3 class="section-title">
+                        <i data-lucide="shield-plus" class="w-4 h-4"></i> Saúde na Gestação
+                    </h3>
+                    <div class="space-y-5">
+                        <div class="space-y-1">
+                            <label class="text-sm font-semibold text-gray-700">Desenvolveu alguma doença na gestação?</label>
+                            <textarea name="doenca_gestacao" rows="2" class="gh-input w-full p-2.5 text-sm resize-none" placeholder="Ex: Diabetes, Hipertensão, etc..."></textarea>
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-sm font-semibold text-gray-700">Está em uso de algum remédio contínuo? Quais?</label>
+                            <textarea name="remedio" rows="2" class="gh-input w-full p-2.5 text-sm resize-none" placeholder="Liste medicamentos e dosagens..."></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Acompanhamento de Exames -->
+                <section>
+                    <h3 class="section-title">
+                        <i data-lucide="scan" class="w-4 h-4"></i> Exames e Ultrassons
+                    </h3>
+                    <div class="space-y-5">
+                        <div class="space-y-1">
+                            <label class="text-sm font-semibold text-gray-700">Houve alterações nos ultrassons?</label>
+                            <textarea name="ultrassom" rows="2" class="gh-input w-full p-2.5 text-sm resize-none"></textarea>
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-sm font-semibold text-gray-700">Já realizou exames? Algum apresentou alteração?</label>
+                            <textarea name="exames" rows="2" class="gh-input w-full p-2.5 text-sm resize-none"></textarea>
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-sm font-semibold text-gray-700">Houve alterações em outros exames?</label>
+                            <textarea name="outros_exames" rows="2" class="gh-input w-full p-2.5 text-sm resize-none"></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Bem-estar e Feto -->
+                <section>
+                    <h3 class="section-title">
+                        <i data-lucide="smile-plus" class="w-4 h-4"></i> Bem-estar e Bebê
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div class="space-y-1">
+                            <label class="text-sm font-semibold text-gray-700">Sentimento Emocional (1 a 10)</label>
+                            <span class="block text-[10px] text-gray-400 mb-1 italic">(1: Ruim | 10: Ótimo)</span>
+                            <select name="emocional" class="gh-input w-full p-2.5 text-sm">
+                                <option value="" disabled selected>Como tem se sentido</option>
+                                <option value="1">1 - Ruim</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 - Regular</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10 - Ótimo</option>
+                            </select>
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-sm font-semibold text-gray-700">Vacinas Recebidas</label>
+                            <input name="vacinas" type="text" class="gh-input w-full p-2.5 text-sm" placeholder="Ex: Influenza, DTPA...">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-sm font-semibold text-gray-700">Posição Fetal do Bebê</label>
+                            <select name="posicao_fetal" class="gh-input w-full p-2.5 text-sm">
+                                <option value="" disabled selected>Selecione a posição</option>
+                                <option value="Longitudinal">Longitudinal</option>
+                                <option value="Transversal">Transversal</option>
+                                <option value="Cefálica">Cefálica</option>
+                                <option value="Pélvica">Pélvica</option>
+                                <option value="Não sei">Não sei</option>
+                            </select>
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-sm font-semibold text-gray-700">Tipo de Parto Desejado</label>
+                            <select name="tipo_parto" class="gh-input w-full p-2.5 text-sm">
+                                <option value="" disabled selected>Selecione a preferência</option>
+                                <option value="Cesária">Cesária</option>
+                                <option value="Vaginal">Vaginal</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Atividade e Ocorrências -->
+                <section>
+                    <h3 class="section-title">
+                        <i data-lucide="alert-triangle" class="w-4 h-4"></i> Rotina e Ocorrências
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div class="space-y-1 md:col-span-2">
+                            <label class="text-sm font-semibold text-gray-700">Atividade física e alimentação</label>
+                            <textarea name="atividade" rows="2" class="gh-input w-full p-2.5 text-sm resize-none" placeholder="Como foi sua rotina alimentar e física?"></textarea>
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-sm font-semibold text-gray-700">Teve internação ou ida ao PS?</label>
+                            <input name="internacao" type="text" class="gh-input w-full p-2.5 text-sm" placeholder="Sim/Não (Motivo)">
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-sm font-semibold text-gray-700">Apresentou sangramento?</label>
+                            <input name="sangramento" type="text" class="gh-input w-full p-2.5 text-sm" placeholder="Sim/Não">
+                        </div>
+                        <div class="space-y-1 md:col-span-2">
+                            <label class="text-sm font-semibold text-gray-700">Já definiu maternidade/hospital?</label>
+                            <input name="maternidade" type="text" class="gh-input w-full p-2.5 text-sm" placeholder="Nome da Instituição">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Rodapé e Envio -->
+                <div class="pt-8 border-t border-[#d0d7de] flex items-center justify-between">
+                    <p class="text-[10px] text-gray-400 font-medium tracking-tight max-w-[250px]">
+                        As informações enviadas são confidenciais e destinadas ao acompanhamento iDoc.
+                    </p>
+                    <button type="submit" class="btn-primary py-3 px-10 text-sm flex items-center gap-2">
+                        <i data-lucide="send" class="w-4 h-4"></i>
+                        Enviar Dados
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <footer class="mt-12 text-center space-y-2">
+            <p class="text-xs text-gray-400 font-bold uppercase tracking-widest">Ifamily iDoc System</p>
+            <div class="flex justify-center gap-3 text-gray-200">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                <i data-lucide="lock" class="w-4 h-4"></i>
+                <i data-lucide="database" class="w-4 h-4"></i>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
